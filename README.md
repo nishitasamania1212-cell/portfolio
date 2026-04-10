@@ -6,7 +6,7 @@ A modern, colorful, and dynamic portfolio website showcasing my projects, skills
 ---
 
 ## 🚀 Live Demo
-🔗 https://your-portfolio-link.com
+🔗 git clone https://github.com/your-username/your-repo-name.git
 
 ---
 
