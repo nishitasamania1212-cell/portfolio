@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nishita Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 id="typing"></h1>
+    <p>Frontend + Python Developer</p>
+    <a href="#projects">View Work</a>
+  </div>
+
+  <!-- Floating elements -->
+  <div class="floating">
+    <span>✨</span>
+    <span>💖</span>
+    <span>🌸</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>I create modern, colorful and user-friendly websites with clean UI and smooth animations.</p>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+
+  <div class="card-container">
+
+    <div class="card">
+      <h3>🌐 Dynamic Portfolio</h3>
+      <p>Full-stack Flask portfolio with animations and contact form.</p>
+    </div>
+
+    <div class="card">
+      <h3>💰 Finance Dashboard</h3>
+      <p>Track income & expenses with dynamic updates.</p>
+      <a href="https://nishitasamania1212-cell.github.io/finance-dashboard/" target="_blank">🔗 View Live</a>
+    </div>
+
+    <div class="card">
+      <h3>🌱 EcoTrack</h3>
+      <p>Carbon emission estimator with categorized analysis.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧬 PCOS Detector</h3>
+      <p>Health prediction web app using Python logic.</p>
+    </div>
+
+    <div class="card">
+      <h3>☕ Cafe Thikana</h3>
+      <p>Responsive modern UI with mobile-first design.</p>
+      <a href="https://cafe-thikana.netlify.app" target="_blank">🔗 View Live</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+
+  <form action="/contact" method="POST">
+    <input name="name" placeholder="Name" required>
+    <input name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Typing effect
+  const text = "Hey, I'm Nishita 💖";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 80);
+    }
+  }
+  typing();
+</script>
+
+</body>
+</html>

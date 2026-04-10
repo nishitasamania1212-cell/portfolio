@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ff9a9e, #fbc2eb, #a18cd1);
+  background-size: 600% 600%;
+  animation: gradientMove 8s infinite alternate;
+  position: relative;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
+
+.hero-content {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 20px rgba(255,105,180,0.5); }
+  to { box-shadow: 0 0 40px rgba(255,20,147,0.8); }
+}
+
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #ff4da6;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background: #ff1493;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff69b4;
+}
+
+/* FLOATING */
+.floating span {
+  position: absolute;
+  font-size: 25px;
+  animation: float 6s infinite ease-in-out;
+}
+
+.floating span:nth-child(1) { top: 10%; left: 20%; }
+.floating span:nth-child(2) { top: 30%; left: 80%; }
+.floating span:nth-child(3) { top: 70%; left: 10%; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+.about, .projects, .contact {
+  padding: 60px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #ff4da6;
+}
+
+/* PROJECTS */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ff4da6;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background: #ff1493;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff69b4;
+}
+
+/* CONTACT */
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff4da6;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1493;
+}
